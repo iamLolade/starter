@@ -23,5 +23,5 @@ const dbURI = process.env.dbURI;
 mongoose_1.default.connect(dbURI)
     .then(() => console.log("Connected to database"))
     .catch(error => console.log(error));
-app.listen(port, () => console.log(`Listening on port: ${port}`));
+app.listen(process.env.PORT || 4000, () => console.log(`Listening on port: ${port}`));
 exports.default = app;
