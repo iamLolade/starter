@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-app.use("/fruits", router)
+app.use("/", router)
 
 //port
 const port = process.env.PORT || 4000;
