@@ -15,7 +15,7 @@ const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
-app.use("/", fruitRoute_1.default);
+app.use("/fruits", fruitRoute_1.default);
 //port
 const port = process.env.PORT || 4000;
 //connect to database
