@@ -24,7 +24,7 @@ export const getFruits = async (req: Request, res: Response, next: NextFunction)
 
     try {
 
-        const fruits = await Fruit.find();
+        const fruits = await Fruit.find().select({ fruit: 1, count: 1 });
         res.status(200).json({ message: "All fruits", data: fruits});
 
     } catch (error) {

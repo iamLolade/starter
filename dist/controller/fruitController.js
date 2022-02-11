@@ -33,7 +33,7 @@ const addFruit = (req, res, next) => __awaiter(void 0, void 0, void 0, function*
 exports.addFruit = addFruit;
 const getFruits = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const fruits = yield fruitModel_1.default.find();
+        const fruits = yield fruitModel_1.default.find().select({ fruit: 1, count: 1 });
         res.status(200).json({ message: "All fruits", data: fruits });
     }
     catch (error) {
